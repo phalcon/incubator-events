@@ -7,56 +7,56 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
-        <directory name="src/" />
+        <directory name="src/"/>
         <ignoreFiles>
             <directory name="vendor" />
         </ignoreFiles>
     </projectFiles>
 
     <issueHandlers>
-        <LessSpecificReturnType errorLevel="info" />
+        <LessSpecificReturnType errorLevel="info"/>
 
         <!-- level 3 issues - slightly lazy code writing, but provably low false-negatives -->
 
-        <DeprecatedMethod errorLevel="info" />
-        <DeprecatedProperty errorLevel="info" />
-        <DeprecatedClass errorLevel="info" />
-        <DeprecatedConstant errorLevel="info" />
-        <DeprecatedFunction errorLevel="info" />
-        <DeprecatedInterface errorLevel="info" />
-        <DeprecatedTrait errorLevel="info" />
+        <DeprecatedMethod errorLevel="info"/>
+        <DeprecatedProperty errorLevel="info"/>
+        <DeprecatedClass errorLevel="info"/>
+        <DeprecatedConstant errorLevel="info"/>
+        <DeprecatedFunction errorLevel="info"/>
+        <DeprecatedInterface errorLevel="info"/>
+        <DeprecatedTrait errorLevel="info"/>
 
-        <MissingClosureReturnType errorLevel="info" />
-        <MissingReturnType errorLevel="info" />
-        <MissingPropertyType errorLevel="info" />
-        <InvalidDocblock errorLevel="info" />
-        <MisplacedRequiredParam errorLevel="info" />
+        <MissingClosureReturnType errorLevel="info"/>
+        <MissingReturnType errorLevel="info"/>
+        <MissingPropertyType errorLevel="info"/>
+        <InvalidDocblock errorLevel="info"/>
+        <MisplacedRequiredParam errorLevel="info"/>
 
-        <PropertyNotSetInConstructor errorLevel="info" />
-        <MissingClosureParamType errorLevel="info" />
-        <MissingParamType errorLevel="info" />
+        <PropertyNotSetInConstructor errorLevel="info"/>
+        <MissingClosureParamType errorLevel="info"/>
+        <MissingParamType errorLevel="info"/>
 
-        <RedundantCondition errorLevel="info" />
+        <RedundantCondition errorLevel="info"/>
 
-        <DocblockTypeContradiction errorLevel="info" />
+        <DocblockTypeContradiction errorLevel="info"/>
 
-        <UnresolvableInclude errorLevel="info" />
+        <UnresolvableInclude errorLevel="info"/>
 
         <!-- level 4 issues - points to possible deficiencies in logic, higher false-positives -->
 
-        <MoreSpecificReturnType errorLevel="info" />
-        <LessSpecificReturnStatement errorLevel="info" />
-        <TypeCoercion errorLevel="info" />
+        <MoreSpecificReturnType errorLevel="info"/>
+        <LessSpecificReturnStatement errorLevel="info"/>
+        <TypeCoercion errorLevel="info"/>
 
-        <PossiblyInvalidPropertyAssignmentValue errorLevel="info" />
-        <PossiblyNullArgument errorLevel="info" />
-        <PossiblyNullArrayOffset errorLevel="info" />
-        <PossiblyNullPropertyAssignmentValue errorLevel="info" />
-        <PossiblyNullReference errorLevel="info" />
+        <PossiblyInvalidPropertyAssignmentValue errorLevel="info"/>
+        <PossiblyNullArgument errorLevel="info"/>
+        <PossiblyNullArrayOffset errorLevel="info"/>
+        <PossiblyNullPropertyAssignmentValue errorLevel="info"/>
+        <PossiblyNullReference errorLevel="info"/>
 
         <!-- level 8 issues - some fatal errors in PHP -->
 
-        <MethodSignatureMismatch errorLevel="info" />
+        <MethodSignatureMismatch errorLevel="info"/>
 
     </issueHandlers>
 </psalm>
