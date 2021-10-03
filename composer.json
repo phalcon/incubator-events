@@ -22,7 +22,7 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/phalcon/incubator-events/issues",
+    "issues": "https://github.com/phalcon/incubator/issues",
     "source": "https://github.com/phalcon/incubator-events",
     "forum": "https://forum.phalcon.io"
   },
