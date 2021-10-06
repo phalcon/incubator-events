@@ -186,9 +186,4 @@ class Manager extends PhalconManager
 
         return true;
     }
-
-    protected function isValidHandler($handler): bool
-    {
-        return (is_object($handler) || is_callable($handler));
-    }
 }
