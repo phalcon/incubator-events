@@ -15,6 +15,10 @@ class Manager extends PhalconManager
     public const HANDLER_KEY = 'class';
     public const PRIORITY_KEY = 'priority';
 
+    /**
+     *@param array $handlers
+     *@return void
+     */
     public function loadHandlers(array $handlers): void
     {
         foreach ($handlers as $event => $handler) {
@@ -22,7 +26,13 @@ class Manager extends PhalconManager
         }
     }
 
-    public function loadHandler(string $event, $handler, int $priority = self::DEFAULT_PRIORITY): void
+    /**
+     * @param string $event
+     * @param mixed $handler
+     * @param int $priority
+     * @return void
+     */
+    public function loadHandler(string $event, mixed $handler, int $priority = self::DEFAULT_PRIORITY): void
     {
         $this->checkEventType($event);
 
@@ -51,6 +61,12 @@ class Manager extends PhalconManager
         }
     }
 
+    /**
+     * @param string $eventType
+     * @param mixed $handler
+     * @param int $priority
+     * @return void
+     */
     public function attach(string $eventType, $handler, int $priority = self::DEFAULT_PRIORITY): void
     {
         if (false === $this->isValidHandler($handler)) {
@@ -71,6 +87,11 @@ class Manager extends PhalconManager
         $priorityQueue->insert($handler, $priority);
     }
 
+    /**
+     * @param string $eventType
+     * @param mixed $handler
+     * @return void
+     */
     public function detach(string $eventType, $handler): void
     {
         if (false === $this->isValidHandler($handler)) {
@@ -101,6 +122,13 @@ class Manager extends PhalconManager
         }
     }
 
+    /**
+     * @param string $eventType
+     * @param mixed $source
+     * @param mixed|null $data
+     * @param bool $cancelable
+     * @param bool $strict
+     */
     public function fire(string $eventType, $source, $data = null, bool $cancelable = true, bool $strict = false)
     {
         $this->checkEventType($eventType);
@@ -120,6 +148,12 @@ class Manager extends PhalconManager
         return $status;
     }
 
+    /**
+     * @param string $eventType
+     * @param Event $event
+     * @param mixed $status
+     * @return mixed
+     */
     public function fireEvents(string $eventType, Event $event, &$status = null): ?bool
     {
         $events = $this->events;
@@ -131,6 +165,10 @@ class Manager extends PhalconManager
         return $status;
     }
 
+    /**
+     * @param SplPriorityQueue $queue
+     * @param Event $event
+     */
     public function firePriorityQueue(SplPriorityQueue $queue, Event $event)
     {
         $eventName = $event->getType();
@@ -178,6 +216,10 @@ class Manager extends PhalconManager
         return $status;
     }
 
+    /**
+     * @param string $eventType
+     * @return bool
+     */
     protected function checkEventType(string $eventType): bool
     {
         if (false === strpos($eventType, ':')) {
