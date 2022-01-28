@@ -62,5 +62,10 @@
       "phpunit.xml.dist",
       "psalm.xml.dist"
     ]
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
   }
 }
