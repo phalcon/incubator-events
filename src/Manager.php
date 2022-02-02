@@ -152,7 +152,7 @@ class Manager extends PhalconManager
      * @param string $eventType
      * @param Event $event
      * @param mixed $status
-     * @return mixed
+     * @return bool|null
      */
     public function fireEvents(string $eventType, Event $event, &$status = null): ?bool
     {
