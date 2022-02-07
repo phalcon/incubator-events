@@ -27,7 +27,7 @@
   },
   "require": {
     "php": ">=7.4",
-    "ext-phalcon": "5.0.0beta2"
+    "ext-phalcon": "^5.0.0beta"
   },
   "require-dev": {
     "phalcon/ide-stubs": "^4.1",
