@@ -120,7 +120,7 @@ class Manager extends PhalconManager
         return $status;
     }
 
-    public function fireEvents(string $eventType, Event $event, &$status = null): ?bool
+    public function fireEvents(string $eventType, Event $event, &$status = null): mixed
     {
         $events = $this->events;
         $fireEvents = $events[$eventType] ?? null;
